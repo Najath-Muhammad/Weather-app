@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import  { useState, useEffect, useRef } from 'react';
 import { searchLocations, reverseGeocode } from '../api/locatioiq';
 import { getWeather } from '../api/openmeteo';
 import type { LocationSuggestion, WeatherData } from '../types/weather.types';
@@ -33,7 +33,7 @@ export default function WeatherPage() {
   const [geoLoading, setGeoLoading] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const debounceRef = useRef<NodeJS.Timeout | null>(null);
+  const debounceRef = useRef<any>(null);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
